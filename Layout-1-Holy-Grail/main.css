@@ -1,0 +1,75 @@
+/* Base Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: #555E7B;
+    color: white;
+    position: relative;
+}
+
+
+/* Demo Styles */
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    grid-template-areas: "header" "main" "aside" "footer";
+    border: 1px solid #555E7B;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        grid-template-columns: 33% 1fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: "header header header" "aside main main" "footer footer footer";
+    }
+}
+
+.wrapper header {
+    grid-area: header;
+    background: rgb(42, 47, 63);
+}
+
+.wrapper main {
+    grid-area: main;
+    background: rgb(42, 47, 63);
+}
+
+.wrapper aside {
+    grid-area: aside;
+    background: rgb(42, 47, 63);
+}
+
+.wrapper footer {
+    grid-area: footer;
+    background: rgb(42, 47, 63);
+}
+
+.box--demo {
+    padding: 2rem;
+    text-align: center;
+    border: 2px solid #555E7B;
+    height: 100%;
+}
